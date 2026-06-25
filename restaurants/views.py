@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from .models import Restaurant
+from django.contrib import messages
 
 def welcome(request):
-    return render(request, 'index.html', {'msg':'Hello World!'})
+    messages = messages(request, message="hello, world")
+    return render(request, 'index.html', {"messages":messages})
 
 def restaurant_list(request):
     context = {
