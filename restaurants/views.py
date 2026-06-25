@@ -19,7 +19,4 @@ def restaurant_detail(request, restaurant_id):
 
 def restaurant_create(request):
 
-    context = {
-
-    }
-    return render(request, 'create.html', context)
+    return render(request, 'create.html')
